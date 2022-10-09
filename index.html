@@ -1,243 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Primary Meta Tags -->
-<title>Jay Mason's Portfolio</title>
-<meta name="title" content="Jay Mason's Portfolio">
-<meta name="description" content="https://jaymason.pro">
+	<title>Jay Mason's Portfolio</title>
+	<meta name="title" content="Jay Mason's Portfolio">
+	<meta name="description" content="https://jay-mason.github.io">
+	<link rel="shortcut icon" href="favicon2.ico" type="image/x-icon">
+	<link rel="icon" href="favicon2.ico" type="image/x-icon">
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://metatags.io/">
-<meta property="og:title" content="Jay Mason's Portfolio">
-<meta property="og:description" content="https://jaymason.pro">
-<meta property="og:image" content="https://jaymason.pro/img/page-preview.jpg">
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://metatags.io/">
-<meta property="twitter:title" content="Jay Mason's Portfolio">
-<meta property="twitter:description" content="https://jaymason.pro">
-<meta property="twitter:image" content="https://jaymason.pro/img/page-preview.jpg">
-
-<title>Portfolio: Jay Mason</title>
-
-<!-- Favicons
-================================================== -->
-<link rel="shortcut icon" href="favicon2.ico" type="image/x-icon">
-<link rel="icon" href="favicon2.ico" type="image/x-icon">
-<!-- / Favicons
-================================================== -->
-
-<!-- Reminder to myself, do not leave this shit here... Put it into a CSS file! -->
-<style>
-:root {
-  --color-white: #fff;
-  --color-black: #333;
-  --color-gray: #75787b;
-  --color-gray-light: #bbb;
-  --color-gray-disabled: #e8e8e8;
-  --color-green: #53a318;
-  --color-green-dark: #383;
-  --font-size-small: .75rem;
-  --font-size-default: .875rem;
-}
-
-.skill-holder{
-    margin-bottom: 7rem;
-}
-
-.skill-bar {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1rem 0;
-}
-.skill-bar li {
-  flex: 2;
-  position: relative;
-  padding: 0 0 14px 0;
-  font-size: 18px;
-  line-height: 1.5;
-  color: var(--color-green);
-  font-weight: 600;
-  white-space: nowrap;
-  overflow: visible;
-  min-width: 0;
-  text-align: center;
-  border-bottom: 2px solid var(--color-gray-disabled);
-}
-.skill-bar li:first-child,
-.skill-bar li:last-child {
-  flex: 1;
-}
-.skill-bar li:last-child {
-  text-align: right;
-}
-.skill-bar li:before {
-  content: "";
-  display: block;
-  width: 8px;
-  height: 8px;
-  background-color: var(--color-gray-disabled);
-  border-radius: 50%;
-  border: 2px solid var(--color-white);
-  position: absolute;
-  left: calc(50% - 6px);
-  bottom: -7px;
-  z-index: 3;
-  transition: all .2s ease-in-out;
-}
-.skill-bar li:first-child:before {
-  left: 0;
-}
-.skill-bar li:last-child:before {
-  right: 0;
-  left: auto;
-}
-.skill-bar span {
-  transition: opacity .3s ease-in-out;
-}
-.skill-bar li:not(.is-active) span {
-  opacity: 0;
-}
-.skill-bar .is-complete:not(:first-child):after,
-.skill-bar .is-active:not(:first-child):after {
-  content: "";
-  display: block;
-  width: 100%;
-  position: absolute;
-  bottom: -2px;
-  left: -50%;
-  z-index: 2;
-  border-bottom: 2px solid var(--color-green);
-}
-.skill-bar li:last-child span {
-  width: 200%;
-  display: inline-block;
-  position: absolute;
-  left: -100%;
-}
-
-.skill-bar .is-complete:last-child:after,
-.skill-bar .is-active:last-child:after {
-  width: 200%;
-  left: -100%;
-}
-
-.skill-bar .is-complete:before {
-  background-color: var(--color-green);
-}
-
-.skill-bar .is-active:before,
-.skill-bar li:hover:before,
-.skill-bar .is-hovered:before {
-  background-color: var(--color-white);
-  border-color: var(--color-green);
-}
-.skill-bar li:hover:before,
-.skill-bar .is-hovered:before {
-  transform: scale(1.33);
-}
-
-.skill-bar li:hover span,
-.skill-bar li.is-hovered span {
-  opacity: 1;
-}
-
-.skill-bar:hover li:not(:hover) span {
-  opacity: 0;
-}
-
-.x-ray .skill-bar,
-.x-ray .skill-bar li {
-  border: 1px dashed red;
-}
-
-.skill-bar .has-changes {
-  opacity: 1 !important;
-}
-.skill-bar .has-changes:before {
-  content: "";
-  display: block;
-  width: 8px;
-  height: 8px;
-  position: absolute;
-  left: calc(50% - 4px);
-  bottom: -20px;
-  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%208%208%22%3E%3Cpath%20fill%3D%22%23ed1c24%22%20d%3D%22M4%200l4%208H0z%22%2F%3E%3C%2Fsvg%3E');
-}
-</style>
-<!-- Remove this -->
-
-<!-- >> CSS
-============================================================================== -->
-<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<!-- Google Web Fonts -->
-<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
-<!-- Font Awesome -->
-<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-<!-- animate.css -->
-<link href="vendor/animate.css" rel="stylesheet">
-<!-- fancybox.css -->
-<link href="vendor/fancybox/jquery.fancybox.css" rel="stylesheet">
-<!-- owl carousel -->
-<link href="vendor/owl.carousel/owl-carousel/owl.carousel.css" rel="stylesheet">
-<link href="vendor/owl.carousel/owl-carousel/owl.theme.css" rel="stylesheet">
-<!-- Main Styles -->
-<link href="css/styles.css" rel="stylesheet">
-
-<!-- >> /CSS
-============================================================================== -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="vendor/animate.css" rel="stylesheet">
+	<link href="vendor/fancybox/jquery.fancybox.css" rel="stylesheet">
+	<link href="vendor/owl.carousel/owl-carousel/owl.carousel.css" rel="stylesheet">
+	<link href="vendor/owl.carousel/owl-carousel/owl.theme.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
 </head>
 <body class="">
-<!-- Page Loader
-========================================================= -->
 <div class="loader-container" id="page-loader"> 
   <div class="loading-wrapper loading-wrapper-hide">
     <div class="loader-animation" id="loader-animation">
         <svg class="svg-loader" width=100 height=100>
           <circle cx=50 cy=50 r=25 />
         </svg>
-    </div>    
-    <!-- Edit With Your Name -->
+    </div>
     <div class="loader-name" id="loader-name">
       <img src="img/logo-negative.png" alt="">
     </div>
-    <!-- /Edit With Your Name -->
   </div>   
 </div>
-<!-- /End of Page loader
-========================================================= -->
-
-
-<!-- Header
-================================================== -->
 <header id="header">
 	<nav class="navbar">
         <div class="container">
-
-            <!-- Navbar Header -->
             <div class="navbar-header">
-            	<!-- Collapse Button -->
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-                <!-- /Collapse Button -->
-                <!-- logo -->
                 <a class="navbar-brand" href="#hero1">
                    <img src="img/logo.png" alt="">
                 </a>
-                <!-- /logo -->
             </div>
-            <!-- / Navbar Header -->
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">                  
                     <li>
@@ -260,19 +66,10 @@
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>
 </header>
-<!-- / Header
-================================================== -->
-
-<!-- Main Content
-================================================== -->
-<section id="body" class="">	
-
-	<!-- Section: Mini Hero -->
+<section id="body" class="">
 	<div class="section-mini-hero" id="hero1" style="background-image: url('img/bg2.jpg');">
 		<div class="container">
 			<div class="profile-pic">
@@ -282,75 +79,49 @@
 			<h2 class="title2 mini-hero-subtitle">Full-Stack Software Engineer & Manager</h2>			
 		</div>
 	</div>
-	<!-- /Section: Mini Hero -->
-
-	<!-- Section: About  -->
 	<div class="section-about" id="about">
 		<div class="container">
-			<!-- Section Title -->
 			<h2 class="title-of-section title-border">About Me</h2>
-			<!-- /Section Title -->	
 		</div>
 		<div class="container about-container">
 			<div class="row contrast">
-				<!-- Left Column -->
 				<div class="col-sm-6 col-no-padding">
 					<div class="about-picture" id="about-picture">
 						<img src="img/portfolio/20210722_142428.jpg" alt="" class="responsive-image">
 					</div>
-				</div>			
-				<!-- /Left Column -->
-				<!-- Right Column -->
+				</div>
 				<div class="col-sm-6"> 
 					<div class="padding-box">
 						<h1 class="title2">Who i am</h1>
 						<p>My name is Jay. I live in Michigan and attend Arizona State University for my Bachelors in Engineering Management with a focus on Software Engineering. I have my associate's degree in Software Engineering and a certification in Web Development. <br><br>
 						    I have nearly a decade of programming experience, across more than 6 languages. In my free-time I enjoy learnining new languages or technologies. I'm currently learning Angular & TypeScript!</p>		
 						<br><br>
-						<!-- row -->
 						<div class="row">
-							<!-- col -->
 							<div class="col-sm-6">
 								<h3 class="title3">Email</h3>
 								<p>masonpjay@gmail.com</p>
 							</div>
-							<!-- /col -->
-							<!-- col -->
 							<div class="col-sm-6">
 								<h3 class="title3">Phone</h3>
 								<p>(586)-707-2807</p>
 							</div>
-							<!-- /col -->
 						</div>	
-						<!-- /row -->
                         <br><br>
-						<!-- row -->
 						<div class="row">
-							<!-- col -->
 							<div class="col-sm-6">
 								<h3 class="title3">Find me On</h3>
-								<!-- Social Icons -->
 			                    <div class="social-icons">
 			                        <a target="_blank" href="https://www.linkedin.com/in/jay-m-391b05177"><i class="fa fa-linkedin"></i></a>
 			                    </div>
-			                    <!-- /Social Icons -->
 							</div>
-							<!-- /col -->
-							
-						</div>	
-						<!-- /row -->					
+						</div>					
 					</div>
 				</div>
-				<!-- /Right Column -->
 			</div>
 		</div>
-		
-			<!-- SECTION: Features -->
 	<div class="section section-features" id="features">
 		<div class="container">	
-			<!-- Features -->
-			<div class="row">				
-				<!-- item -->
+			<div class="row">
 				<div class="col-sm-3">
 					<div class="feature-item">
 						<div class="feature-icon">
@@ -362,8 +133,6 @@
 						</div>
 					</div>					
 				</div>
-				<!-- /item -->
-				<!-- item -->
 				<div class="col-sm-3">
 					<div class="feature-item">
 						<div class="feature-icon">
@@ -375,8 +144,6 @@
 						</div>
 					</div>					
 				</div>
-				<!-- /item -->
-				<!-- item -->
 				<div class="col-sm-3">
 					<div class="feature-item">
 						<div class="feature-icon">
@@ -388,8 +155,6 @@
 						</div>
 					</div>					
 				</div>
-				<!-- /item -->
-				<!-- item -->
 				<div class="col-sm-3">
 					<div class="feature-item">
 						<div class="feature-icon">
@@ -401,16 +166,10 @@
 						</div>
 					</div>					
 				</div>
-				<!-- /item -->
 			</div>
-			<!-- /features -->	
 		</div>
 	</div>
-	<!-- /SECTION: Features -->	
-	</div>	
-	<!-- / Section: About  -->
-	
-    <!-- Section: Image background-->
+	</div>
     <div class="section-resume" id="resume">
     	<div class="section contrast contrast-with-image text-center" style="background-image: url('img/bg2.jpg')">
     		<div class="container">
@@ -419,19 +178,11 @@
     		</div>
     	</div>
 	</div>
-	<!-- / Section: Image Background-->
-	
-	<!-- Section: Resume Education -->
 	<div class="section" id="education">
 		<div class="container">
-			<!-- Section Title -->
 			<h2 class="title-of-section title-border">Education</h2>
-			<!-- /Section Title -->		
-			<!-- row -->
-			<div class="row">				
-				<!-- item -->
+			<div class="row">
 				<div class="col-sm-4">
-					<!-- box -->
 					<div class="resume-box">
 						<p class="resume-item-ico"><i class="fa fa-bank"></i></p>
 						<h2 class="title2 resume-item-title1">Bachelor's in Engineering Management (S.E Focus)</h2>
@@ -439,12 +190,8 @@
 						<p>Expected Graduation: 2024</p>
 						<a target="_blank" href="/transcripts/Mason_Jay_ASU_Transcript.pdf" class="btn btn-default">Transcript</a>
 					</div>
-					<!-- box -->
 				</div>
-				<!-- /item -->
-				<!-- item -->
 				<div class="col-sm-4">
-					<!-- box -->
 					<div class="resume-box">
 						<p class="resume-item-ico"><i class="fa fa-bank"></i></p>
 						<h2 class="title2 resume-item-title1">Associate's in Software Engineering</h2>
@@ -452,34 +199,21 @@
 						<p>Graduated: April, 2019<br>Awards: Summa Cum Laude</p>
 						<a target="_blank" href="/transcripts/Mason_Jay_OCC_Transcript.pdf" class="btn btn-default">Transcript</a>
 					</div>
-					<!-- box -->
 				</div>
-				<!-- /item -->
-				<!-- item -->
 				<div class="col-sm-4">
-					<!-- box -->
 					<div class="resume-box">
 						<p class="resume-item-ico"><i class="fa fa-bank"></i></p>
 						<h2 class="title2 resume-item-title1">Web Developer Certificate</h2>
 						<h3 class="title3 resume-item-title2">Oakland Community College</h3>
 						<p>Received: December, 2017<br>Awards: Summa Cum Laude</p>
 					</div>
-					<!-- box -->
 				</div>
-				<!-- /item -->
 			</div>
-			<!-- /row -->
 		</div>
 	</div>
-	<!-- /Section: Resume Education -->	
-	
-	<!-- Section: Skills -->
 	<div class="section" id="skills">
 		<div class="container">
-			<!-- Section Title -->
 			<h2 class="title-of-section title-border">Skills</h2>
-			<!-- /Section Title -->		
-			<!-- row -->
 			<div class="row">				
 				<div class="col-sm-6">
 				    <section class="skill-holder">
@@ -566,19 +300,11 @@
                     </section>
 				</div>
 			</div>
-			<!-- /row -->
 		</div>
 	</div>
-	<!-- /Section: Skills -->	
-
-	<!-- Section: Portfolio -->
 	<div class="section section-portfolio contrast" id="projects">
 		<div class="container">
-			<!-- Section Title -->
 			<h2 class="title-of-section title-border">Projects</h2>
-			<!-- /Section Title -->	
-
-			<!-- Categories -->
 			<div class="portfolio-filter">
 				<div class="" id="filter-header">
 					<span class="portfolio-filter-title">Filter: </span>
@@ -587,202 +313,75 @@
 					<a href="#" class="category-item" data-filter="cat-app">Application</a>
 				</div>
 			</div>
-			<!-- Categories -->
-
-			<!-- portfolio list -->
 			<div class="portfolio-list row" id="filter-container">
-
-				<!-- item -->
 				<div class="col-sm-4">
 					<div class="portfolio-item filter-item cat-web">
 						<a href="img/portfolio/p1.jpg" class="portfolio-thumbnail fancybox" rel="portfolio" title="Complete Content Management System utilizing Bootstrap, PHP and HTML/CSS/JS" style="background-image: url('img/portfolio/p1.jpg');">
-							<!-- portfolio-description -->
 							<div class="portfolio-description-wrapper">
 								<div class="portfolio-description">
-									<!-- portfolio name -->
 									<h2 class="portfolio-title">Oakland HOPE Volunteer Portal</h2>
-									<!-- /portfolio name -->
 									<span class="see-more">Content Management System designed to manage and track volunteers for a local food pantry</span>
 								</div>
 							</div>
-							<!-- /portfolio-description -->
 						</a>
 					</div>
-				</div>				
-				<!-- /item -->
-
-				<!-- item -->
+				</div>
 				<div class="col-sm-4">
 					<div class="portfolio-item filter-item cat-app">
 						<a href="img/portfolio/p2.jpg" class="portfolio-thumbnail fancybox" rel="portfolio" title="Game emulator developed using C# with DotNetty" style="background-image: url('img/portfolio/p2.jpg');">
-							<!-- portfolio-description -->
 							<div class="portfolio-description-wrapper">
 								<div class="portfolio-description">
-									<!-- portfolio name -->
 									<h2 class="portfolio-title">C# .NET Framework Game Emulator</h2>
-									<!-- /portfolio name -->
 									<span class="see-more">Emulator developed with .NET Framework 4.8 utilizing DotNetty NuGet Package for client-server connections</span>
 								</div>
 							</div>
-							<!-- /portfolio-description -->
 						</a>
 					</div>
-				</div>				
-				<!-- /item -->
-
-				
-			</div>
-			<!-- /portfolio list -->		
+				</div>
+			</div>	
 		</div>
 	</div>	
-	<!-- /Section: portfolio -->
-
-	
-	<!-- Section: Contact -->		
 	<div class="section section-contact" id="contact">
 		<div class="container">
-			<!-- Section Title -->
-			<h2 class="title-of-section title-border">Let's Chat</h2>
-			<!-- /Section Title -->
-			<!-- row -->
+			<h2 class="title-of-section title-border" style="margin-bottom:0px;">Let's Chat</h2>
 			<div class="row">
-				<!-- col -->
-				<div class="col-sm-5">
-					<!-- box -->
+				<div class="col-12">
 					<div class="contact-box">
-						<h4 class="title4">Phone: </h4>
+						<h2 class="title4">Phone: </h2>
 						<p>(586)-707-2807</p>
-						<h4 class="title4">Mail: </h4>
+						<h2 class="title4">Mail: </h2>
 						<p>masonpjay@gmail.com</p>
-						<!-- Social Icons -->
 	                    <div class="social-icons">
 	                        <a target="_blank" href="https://www.linkedin.com/in/jay-m-391b05177"><i class="fa fa-linkedin"></i></a>
 	                    </div>
-	                    <!-- /Social Icons -->
-					</div>
-					<!-- /box -->					
+					</div>		
 				</div>
-				<!-- /col -->
-				<!-- col -->
-				<div class="col-sm-7">
-					<!-- form -->
-					<form action="" id="contactForm">
-						<!-- item -->            
-						<div class="form-group">
-						  <input type="text" class="form-control required" id="name" name="name" placeholder="Name*" required>
-						</div>    
-						<!-- /item -->
-						<!-- item -->        
-						<div class="form-group">
-						  <input type="email" class="form-control required" id="email" name="email" placeholder="Email" required>
-						</div>    
-						<!-- /item --> 
-						<!-- item -->            
-						<div class="form-group">
-						  <input type="text" class="form-control required" id="subject" name="subject" placeholder="Subject" required>
-						</div>    
-						<!-- /item -->
-						<!-- item -->            
-						<div class="form-group">
-						  <textarea class="form-control required" name="message" id="message" placeholder="Message" required></textarea>
-						</div>    
-						<!-- /item --> 
-						<!-- item -->            
-						<div class="form-group form-send">
-						  <input type="submit" value="Send" class="btn btn-default btn3">
-						</div>    
-						<!-- /item -->                
-					</form>
-					<!-- /form -->
-				</div>
-				<!-- /col -->
 			</div>
-			<!-- /row -->
 		</div>
 	</div>
-	<!-- /Section: Contact -->	
-
 </section>
-<!-- /Main Content
-================================================== -->
-
-<!-- Contact Form - Ajax Messages
-========================================================= -->
-<!-- Form Sucess -->
-<div class="form-result modal-wrap" id="contactSuccess">
-  <div class="modal-bg"></div>
-  <div class="modal-content">
-    <h4 class="modal-title"><i class="fa fa-check-circle"></i> Success!</h4>
-    <p>Thanks for reaching out! I'll get back with you as soon as I can.</p>
-  </div>
-</div>
-<!-- /Form Sucess -->
-<!-- form-error -->
-<div class="form-result modal-wrap" id="contactError">
-  <div class="modal-bg"></div>
-  <div class="modal-content">
-    <h4 class="modal-title"><i class="fa fa-times"></i> Error</h4>
-    <p>There was an error sending your message.</p>
-  </div>
-</div>
-<!-- /form-error -->
-<!-- / Contact Form - Ajax Messages
-========================================================= -->
-
-<!-- Footer
-================================================== -->
 <footer id="footer">
     <div class="secondary-footer">
         <div class="container">
-            <!-- row -->
             <div class="row">
-                <!-- col -->
                 <div class="col-sm-12">
                     <p class="footer-quote"><strong><quote>"The only way to do great work is to love what you do. If you haven't found it yet, keep looking. As with all matters of the heart, you'll know when you find it."</quote></strong> <i>- Steve Jobs</i></p>
                 </div>
-                <!-- /col -->
             </div>
-            <!-- /row -->
         </div>        
     </div>  
 </footer>
-<!-- /Footer
-================================================== -->
 
-
-<!-- >> JS
-============================================================================== -->
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="vendor/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="vendor/validate.js"></script>
-<!-- Owl Caroulsel -->
 <script src="vendor/owl.carousel/owl-carousel/owl.carousel.js"></script>
-<!-- Waypoints -->
 <script src="vendor/waypoints.min.js"></script>
-<!-- Fancybox -->
 <script src="vendor/fancybox/jquery.fancybox.js"></script>
-<!-- Owl Caroulsel -->
 <script src="vendor/owl.carousel/owl-carousel/owl.carousel.js"></script>
-<!-- Images Loaded-->
 <script src="vendor/imagesloaded.pkgd.min.js"></script>
-<!-- Double Tap to Go -->
 <script src="vendor/doubletaptogo.min.js"></script>
-<!-- Cross-browser -->
 <script src="vendor/cross-browser.js"></script>
-<!-- Main Scripts -->
 <script src="js/main.js"></script>
-
-
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-  <script src="vendor/html5shiv.js"></script>
-  <script src="vendor/respond.min.js"></script>
-<![endif]-->
-<!-- >> /JS
-============================================================================= -->
 </body>
 </html>
