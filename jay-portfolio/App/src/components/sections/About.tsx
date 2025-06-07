@@ -28,8 +28,8 @@ const About: React.FC = () => {
                         <div className="d-flex flex-column w-50 small px-2 text-nowrap">
                             <span className="fw-bold border-bottom">LINKS</span>
                             <div className="d-flex flex-row gap-2 mt-2">
-                                <Button variant="primary" className="portfolio-link-btn"><i className="fa-brands fa-linkedin-in"></i></Button>
-                                <Button variant="primary" className="portfolio-link-btn"><i className="fa-brands fa-github"></i></Button>
+                                <a href="https://www.linkedin.com/in/jay-masonii/" target="_blank"><Button variant="primary" className="portfolio-link-btn"><i className="fa-brands fa-linkedin-in"></i></Button></a>
+                                <a href="https://github.com/Jay-Mason" target="_blank"><Button variant="primary" className="portfolio-link-btn"><i className="fa-brands fa-github"></i></Button></a>
                             </div>
                         </div>
                     </div>
