@@ -11,7 +11,7 @@ const Portfolio: React.FC = () => {
                 <Row className="portfolio-section">
                     <Col className="d-flex flex-column justify-content-center align-items-center gap-2">
                         <div className="portfolio-img-border">
-                            <Image className="portfolio-img" src="/src/assets/jpeg/portfolio.jpeg" roundedCircle />
+                            <Image className="portfolio-img" src="/assets/jpeg/portfolio.jpeg" roundedCircle />
                         </div>
                         <h1>Hi, I'm Jay Mason!</h1>
                         <p className="text-muted">FULL-STACK SOFTWARE ENGINEER & TECHNICAL LEAD</p>
