@@ -1,0 +1,33 @@
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@function conic-gradient-fn() {
+  @return conic-gradient(
+        from var(--angle), 
+        $primary-color 0%, 
+        darken($primary-color, 50%) 25%, 
+        darken($primary-color, 25%) 40%, 
+        $white 50%, 
+        darken($primary-color, 25%) 60%, 
+        darken($primary-color, 50%) 75%, 
+        $primary-color 100%
+    );
+}
+
+@mixin spinning-conic-gradient() {
+  background: conic-gradient-fn();
+  background-repeat: no-repeat;
+  animation: spin-gradient 2s linear 2;
+}
+
+@keyframes spin-gradient {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}

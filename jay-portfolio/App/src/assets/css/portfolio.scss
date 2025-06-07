@@ -1,0 +1,99 @@
+body {
+    background: $background-color-primary;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    position: relative;
+
+    .scroll-to-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+
+        > button {
+            border-radius: 50%;
+            height: 3rem;
+            width: 3rem;
+        }
+    }
+
+    .portfolio-navbar {
+        background-color: $secondary-color;
+        border-bottom: 2px solid darken($secondary-color, 10%);
+
+        .navbar-brand {
+            color: $white;
+        }
+
+        .nav-link {
+            color: $white;
+
+            &:hover {
+                border-radius: 0.25rem;
+                background-color: $tertiary-color;
+            }
+
+            &.active {
+                color: $white;
+                border-bottom: 2px solid $primary-color;
+            }
+        }
+    }
+
+    .portfolio-section {
+        min-height: 200px;
+        padding: 1rem;
+        background: $background-color-primary;
+
+        &:nth-of-type(even) {
+            background: $background-color-secondary;
+        }
+
+        .section-title {
+            margin-bottom: 1.25rem;
+        }
+
+        .portfolio-img-border {
+            @include spinning-conic-gradient();
+            border-radius: 50%;
+            padding: 0.3rem;
+            display: inline-block;
+
+            .portfolio-img {
+                width: 12rem;
+                height: 12rem;
+                object-fit: cover;
+                border-radius: 50%;
+                display: block;
+            }
+        }
+
+        .portfolio-link-btn {
+            background-color: $primary-color;
+            border-radius: 2rem;
+            height: 30px;
+            padding: 0;
+            width: 30px;
+
+            &:hover {
+                background-color: darken($primary-color, 10%);
+            }
+        }
+
+        .education-card {
+            border: 2px solid lighten($primary-color, 5%);
+            border-radius: 1.25rem;
+            width: 18rem;
+
+            .education-card-title {
+                border-bottom: 1px solid $secondary-color;
+                height: 3rem;
+                padding-bottom: 4rem;
+            }
+        }
+    }
+
+    footer {
+        background-color: $tertiary-color;
+        color: $white;
+    }
+}
