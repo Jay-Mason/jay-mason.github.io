@@ -53,7 +53,7 @@ body {
         }
 
         .portfolio-img-border {
-            @include spinning-conic-gradient();
+            @include profile-img-border();
             border-radius: 50%;
             padding: 0.3rem;
             display: inline-block;
@@ -86,8 +86,44 @@ body {
 
             .education-card-title {
                 border-bottom: 1px solid $secondary-color;
+                min-height: 4rem;
+                padding-bottom: 1rem;
+            }
+        }
+
+        .overview-card {
+            @include overview-card-border();
+
+            @for $i from 1 through 5 {
+                &:nth-child(#{$i}) {
+                    animation-delay: #{2 * $i}s;
+                }
+            }
+
+            width: 18rem;
+
+            .overview-card-title {
+                margin-top: -1rem;
+            }
+
+            .overview-card-icon {
+                background-color: $primary-color;
+                border-radius: 50%;
+                color: $white;
                 height: 3rem;
-                padding-bottom: 4rem;
+                font-size: 1.5rem;
+                line-height: 2.5rem;
+                padding: 0.25rem;
+                position: relative;
+                left: calc(50% - 1.5rem);
+                top: -2rem;
+                width: 3rem;
+            }
+
+            .overview-card-item {
+                > i {
+                    color: $primary-color;
+                }
             }
         }
     }

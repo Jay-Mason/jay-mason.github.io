@@ -4,7 +4,7 @@
   initial-value: 0deg;
 }
 
-@function conic-gradient-fn() {
+@function profile-img-gradient() {
   @return conic-gradient(
         from var(--angle), 
         $primary-color 0%, 
@@ -17,10 +17,31 @@
     );
 }
 
-@mixin spinning-conic-gradient() {
-  background: conic-gradient-fn();
+@function overview-card-gradient() {
+  @return conic-gradient(
+        from var(--angle), 
+        #3f5bfb 0%,
+        #fc46f3 25%,
+        #9546fc 50%,
+        #ffb0ff 75%,
+        #ffc3ff 85%,
+        #ffffff 90%,
+        #c9c3ff 95%,
+        #3f5bfb 100%,
+    );
+}
+
+@mixin profile-img-border() {
+  background: profile-img-gradient();
   background-repeat: no-repeat;
-  animation: spin-gradient 2s linear 2;
+  animation: spin-gradient 2s linear 1;
+}
+
+@mixin overview-card-border() {
+  background: linear-gradient($white, $white) padding-box, overview-card-gradient() border-box;
+  background-repeat: no-repeat;
+  border-width: 3px;
+  animation: spin-gradient 3s linear 2;
 }
 
 @keyframes spin-gradient {

@@ -20,8 +20,8 @@ const Menu: React.FC = () => {
                     </Offcanvas.Header>
                     <Offcanvas.Body>
                         <Nav id="portfolio-nav" className="justify-content-end flex-grow-1 pe-3">
+                            <Nav.Link href="#overview">Profile</Nav.Link>
                             <Nav.Link href="#about">About</Nav.Link>
-                            <Nav.Link href="#resume">Resume</Nav.Link>
                             <Nav.Link href="#education">Education</Nav.Link>
                             { /*<Nav.Link href="#skills">Skills</Nav.Link>
                             <Nav.Link href="#projects">Projects</Nav.Link>

@@ -1,7 +1,7 @@
-import { Col, Container, Image, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import About from "./sections/About";
 import Education from "./sections/Education";
-import Resume from "./sections/Resume";
+import Profile from "./sections/Profile";
 
 const Portfolio: React.FC = () => {
 
@@ -10,21 +10,12 @@ const Portfolio: React.FC = () => {
             <Container fluid>
                 <Row className="portfolio-section">
                     <Col className="d-flex flex-column justify-content-center align-items-center gap-2">
-                        <div className="portfolio-img-border">
-                            <Image className="portfolio-img" src="/assets/jpeg/portfolio.jpeg" roundedCircle />
-                        </div>
-                        <h1>Hi, I'm Jay Mason!</h1>
-                        <p className="text-muted">FULL-STACK SOFTWARE ENGINEER & TECHNICAL LEAD</p>
+                        <Profile />
                     </Col>
                 </Row>
                 <Row className="portfolio-section">
                     <Col>
                         <About />
-                    </Col>
-                </Row>
-                <Row className="portfolio-section">
-                    <Col>
-                        <Resume />
                     </Col>
                 </Row>
                 <Row className="portfolio-section">

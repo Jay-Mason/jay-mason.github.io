@@ -8,7 +8,7 @@ const Education: React.FC = () => {
     return (
         <>
             <h2 id="education" className="section-title">Education</h2>
-            <div className="d-flex justify-content-center gap-3">
+            <div className="d-flex justify-content-center align-items-center gap-3 flex-wrap">
                 <Card className="education-card">
                     <Card.Body className="d-flex flex-column text-center">
                         <p className="fw-bold text-wrap education-card-title">Bachelor's in Engineering Management (S.E Focus)</p>
