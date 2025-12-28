@@ -7,7 +7,7 @@ import Projects from "./sections/Projects";
 const Portfolio: React.FC = () => {
 
     return (
-        <div data-bs-spy="scroll" data-bs-target="#portfolio-nav" data-bs-offset="0" className="scrollspy-example" tabIndex={0}>
+        <div data-bs-spy="scroll" data-bs-target="#portfolio-nav" className="scrollspy-example" tabIndex={0}>
             <Container fluid>
                 <Row className="portfolio-section">
                     <Col className="d-flex flex-column justify-content-center align-items-center gap-2">
@@ -19,12 +19,12 @@ const Portfolio: React.FC = () => {
                         <About />
                     </Col>
                 </Row>
-                <Row className="portfolio-section">
+                <Row className="portfolio-section section-block">
                     <Col>
                         <Education />
                     </Col>
                 </Row>
-                <Row className="portfolio-section">
+                <Row className="portfolio-section section-block">
                     <Col>
                         <Projects />
                     </Col>
