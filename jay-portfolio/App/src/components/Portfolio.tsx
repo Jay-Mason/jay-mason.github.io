@@ -2,6 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import About from "./sections/About";
 import Education from "./sections/Education";
 import Profile from "./sections/Profile";
+import Projects from "./sections/Projects";
 
 const Portfolio: React.FC = () => {
 
@@ -23,14 +24,14 @@ const Portfolio: React.FC = () => {
                         <Education />
                     </Col>
                 </Row>
-                {/*<Row className="portfolio-section">
-                    <Col>
-                        <Skills />
-                    </Col>
-                </Row>
                 <Row className="portfolio-section">
                     <Col>
                         <Projects />
+                    </Col>
+                </Row>
+                {/*<Row className="portfolio-section">
+                    <Col>
+                        <Skills />
                     </Col>
                 </Row>
                 <Row className="portfolio-section">

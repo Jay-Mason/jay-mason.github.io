@@ -10,9 +10,9 @@ const About: React.FC = () => {
                     <Card.Title>Who I Am</Card.Title>
                     <hr />
                     <div>
-                        <p className="small">Hey there, my name is Jay! I'm a Husband, Father, and Software Engineer. I'm pursuing a degree in Engineering Management focusing on Software Engineering at Arizona State University. I also hold an associate's degree in Software Engineering and a certification in Web Development.</p>
-                        <p className="small">I'm a seasoned engineer with nearly a decade of experience across various programming languages. When I'm not working on my studies, I volunteer my time with Oakland HOPE, a non-profit organization, to design and maintain systems used for tracking volunteers and managing their Food Pantry.</p>
-                        <p className="small">I'm passionate about using my skills to create efficient and user-friendly solutions, and I'm always looking for new challenges to push myself further.</p>
+                        <p className="small">Hey there, I'm Jay! I'm a husband, father, and software engineer with a strong interest in building technology that supports real people and real-world experiences. I've earned my Bachelor's degree in Engineering Management with a focus on Software Engineering, along with an Associate's degree in Software Engineering and a certification in Web Development.</p>
+                        <p className="small">With nearly a decade of hands-on experience, I've worked across a wide range of programming languages and environments, from modern web applications to performance-critical systems. Outside of my professional work, I volunteer as a software engineer for Oakland HOPE, a nonprofit organization where I design and maintain systems used to manage volunteers and support food pantry operations.</p>
+                        <p className="small">I'm passionate about creating efficient, well-designed, and user-friendly solutions, whether they're customer-facing applications or the internal systems that keep operations running smoothly. I enjoy learning new technologies, collaborating with others, and taking on challenges that push me to grow.</p>
                     </div>
                     <div className="d-flex gap-2 flex-grow-1 mt-4">
                         <div className="d-flex flex-column w-50 small px-2 text-nowrap">

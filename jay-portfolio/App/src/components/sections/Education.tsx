@@ -14,8 +14,8 @@ const Education: React.FC = () => {
                         <p className="fw-bold text-wrap education-card-title">Bachelor's in Engineering Management (S.E Focus)</p>
                         <div className="d-flex flex-column align-items-center gap-2 text-center small py-2">
                             <span className="fst-italic">Arizona State University</span>
-                            <span>Expected Graduation: Fall 2025</span>
-                            <span>GPA: 3.97</span>
+                            <span>Graduated 2025</span>
+                            <span>Honors: Summa Cum Laude (4.0)</span>
                         </div>
                         <Button variant="primary" className="mt-auto" onClick={() => navigateInternal("/transcripts/Mason_Jay_ASU_Transcript.pdf")}>Transcript</Button>
                     </Card.Body>
@@ -26,7 +26,7 @@ const Education: React.FC = () => {
                         <div className="d-flex flex-column align-items-center gap-2 text-center small py-2">
                             <span className="fst-italic">Oakland Community College</span>
                             <span>Graduated 2019</span>
-                            <span>Summa Cum Laude</span>
+                            <span>Honors: Summa Cum Laude (3.9)</span>
                         </div>
                         <Button variant="primary" className="mt-auto" onClick={() => navigateInternal("/transcripts/Mason_Jay_OCC_Transcript.pdf")}>Transcript</Button>
                     </Card.Body>
@@ -37,7 +37,7 @@ const Education: React.FC = () => {
                         <div className="d-flex flex-column align-items-center gap-2 text-center small py-2">
                             <span className="fst-italic">Oakland Community College</span>
                             <span>Received 2017</span>
-                            <span>Summa Cum Laude</span>
+                            <span>Honors: Summa Cum Laude</span>
                         </div>
                         <Button variant="primary" className="mt-auto" onClick={() => navigateInternal("/transcripts/Mason_Jay_OCC_Transcript.pdf")}>Transcript</Button>
                     </Card.Body>

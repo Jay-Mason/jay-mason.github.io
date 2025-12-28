@@ -91,6 +91,35 @@ body {
             }
         }
 
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(18rem, 18rem));
+            gap: 1rem;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .project-card {
+            border: 2px solid lighten($primary-color, 5%);
+            border-radius: 1.25rem;
+            width: 100%;
+            max-width: 18rem;
+            display: flex !important;
+            flex-direction: column;
+            height: 100%;
+
+            > .card-body {
+                flex: 1 1 auto;
+                display: flex !important;
+                flex-direction: column;
+            }
+
+            .project-card-title {
+                border-bottom: 1px solid $secondary-color;
+                padding-bottom: 1rem;
+            }
+        }
+
         .overview-card {
             @include overview-card-border();
 
