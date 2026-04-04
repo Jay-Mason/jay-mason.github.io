@@ -85,7 +85,7 @@ const Profile: React.FC = () => {
                     </Card.Body>
                 </Card>
             </div>
-            <a href="/resumes/MasonJay2025.pdf" target="_blank"><Button variant="primary" size="lg">View Full Resume</Button></a>
+            <a href="/resumes/MasonJay.pdf" target="_blank"><Button variant="primary" size="lg">View Full Resume</Button></a>
         </>
     );
 };
