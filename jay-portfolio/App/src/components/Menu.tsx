@@ -73,9 +73,9 @@ const Menu: React.FC = () => {
     };
 
     return (
-        <Navbar expand="md" className="pt-0 sticky-top">
-            <Container className="portfolio-navbar py-2" fluid>
-                <Navbar.Brand href="#">Jay Mason</Navbar.Brand>
+        <Navbar expand="md" className="portfolio-navbar py-2 sticky-top">
+            <Container fluid>
+                <Navbar.Brand href="#about" className="ps-3">Jay Mason</Navbar.Brand>
                 <Navbar.Toggle aria-controls="offcanvasNavbar-expand-md" onClick={handleShow} className="d-md-none" />
                 <Navbar.Offcanvas
                     id="offcanvasNavbar-expand-md"

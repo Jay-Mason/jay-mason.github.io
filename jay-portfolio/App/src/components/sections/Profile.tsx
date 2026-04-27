@@ -4,10 +4,15 @@ const Profile: React.FC = () => {
     return (
         <>
             <div className="portfolio-img-border">
-                <Image className="portfolio-img" src="/assets/jpeg/portfolio.jpeg" roundedCircle />
+                <Image
+                    className="portfolio-img"
+                    src="/assets/jpeg/portfolio.jpeg"
+                    alt="Portrait of Jay Mason"
+                    roundedCircle
+                />
             </div>
             <h1 id="profile">Hi, I'm Jay Mason!</h1>
-            <p className="text-muted">FULL-STACK SOFTWARE ENGINEER & TECHNICAL LEAD</p>
+            <p className="text-muted mb-5">FULL-STACK SOFTWARE ENGINEER & TECHNICAL LEAD</p>
             <div className="d-flex justify-content-center align-items-center gap-3 flex-wrap">
                 <Card className="overview-card">
                     <Card.Body className="d-flex flex-column text-center">
@@ -85,7 +90,17 @@ const Profile: React.FC = () => {
                     </Card.Body>
                 </Card>
             </div>
-            <a href="/resumes/MasonJay.pdf" target="_blank"><Button variant="primary" size="lg">View Full Resume</Button></a>
+            <Button
+                as="a"
+                href="/resumes/MasonJay.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="primary"
+                size="lg"
+                className="mt-4"
+            >
+                View Full Resume
+            </Button>
         </>
     );
 };

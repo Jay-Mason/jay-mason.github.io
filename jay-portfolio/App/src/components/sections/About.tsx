@@ -5,7 +5,7 @@ const About: React.FC = () => {
     return (
         <>
             <h2 id="about" className="section-title">About Me</h2>
-            <Card>
+            <Card className="w-75 mx-auto">
                 <Card.Body className="px-4">
                     <Card.Title>Who I Am</Card.Title>
                     <hr />
@@ -17,19 +17,35 @@ const About: React.FC = () => {
                     <div className="d-flex gap-2 flex-grow-1 mt-4">
                         <div className="d-flex flex-column w-50 small px-2 text-nowrap">
                             <span className="fw-bold border-bottom">EMAIL</span>
-                            <span>masonpjay@gmail.com</span>
+                            <a href="mailto:masonpjay@gmail.com">masonpjay@gmail.com</a>
                         </div>
-                        <div className="d-flex flex-column w-50 small px-2 text-nowrap">
-                            <span className="fw-bold border-bottom">PHONE</span>
-                            <span>(586) 707-2807</span>
-                        </div>
-                    </div>
-                    <div className="d-flex gap-2 flex-grow-1 mt-4">
                         <div className="d-flex flex-column w-50 small px-2 text-nowrap">
                             <span className="fw-bold border-bottom">LINKS</span>
                             <div className="d-flex flex-row gap-2 mt-2">
-                                <a href="https://www.linkedin.com/in/jay-masonii/" target="_blank"><Button variant="primary" className="portfolio-link-btn"><i className="fa-brands fa-linkedin-in"></i></Button></a>
-                                <a href="https://github.com/Jay-Mason" target="_blank"><Button variant="primary" className="portfolio-link-btn"><i className="fa-brands fa-github"></i></Button></a>
+                                <Button
+                                    as="a"
+                                    href="https://www.linkedin.com/in/jay-masonii/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    variant="primary"
+                                    className="portfolio-link-btn"
+                                    aria-label="Open LinkedIn profile in a new tab"
+                                    title="LinkedIn"
+                                >
+                                    <i className="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                                </Button>
+                                <Button
+                                    as="a"
+                                    href="https://github.com/Jay-Mason"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    variant="primary"
+                                    className="portfolio-link-btn"
+                                    aria-label="Open GitHub profile in a new tab"
+                                    title="GitHub"
+                                >
+                                    <i className="fa-brands fa-github" aria-hidden="true"></i>
+                                </Button>
                             </div>
                         </div>
                     </div>

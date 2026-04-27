@@ -1,8 +1,38 @@
 body {
-    background: $background-color-primary;
-    font-family: "Inter", sans-serif;
+    background: radial-gradient(900px 600px at 18% -10%, rgba($primary-0, 0.38), transparent 55%),
+        radial-gradient(760px 520px at 88% 6%, rgba($accent-1, 0.20), transparent 55%),
+        radial-gradient(700px 520px at 60% 110%, rgba($primary-1, 0.10), transparent 60%),
+        $bg-0;
+    color: $text-0;
+    font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     font-style: normal;
     position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    a {
+        color: var(--bs-link-color);
+        text-decoration-color: rgba($primary-1, 0.6);
+        text-underline-offset: 0.16em;
+
+        &:hover {
+            color: var(--bs-link-hover-color);
+            text-decoration-color: rgba($primary-0, 0.85);
+        }
+    }
+
+    ::selection {
+        background: rgba($primary-0, 0.35);
+    }
+
+    hr {
+        border-color: rgba(255, 255, 255, 0.28);
+        opacity: 1;
+    }
+
+    .text-muted {
+        color: $text-2 !important;
+    }
 
     .scroll-to-top {
         position: fixed;
@@ -10,57 +40,104 @@ body {
         right: 2rem;
 
         > button {
+            background: linear-gradient(180deg, rgba($primary-1, 0.28), rgba($primary-0, 0.22));
+            border: 1px solid $border-1;
+            color: $text-0;
             border-radius: 50%;
             height: 3rem;
             width: 3rem;
+            box-shadow: $shadow-0;
+
+            &:hover {
+                transform: translateY(-1px);
+                border-color: rgba($primary-1, 0.35);
+            }
         }
     }
 
     .portfolio-navbar {
-        background-color: $secondary-color;
-        border-bottom: 2px solid darken($secondary-color, 10%);
+        background: linear-gradient(180deg, rgba($bg-1, 0.82), rgba($bg-1, 0.68));
+        border-bottom: 1px solid $border-0;
+        backdrop-filter: blur(14px);
         z-index: 1030;
+        box-shadow: 0 18px 60px rgba($primary-0, 0.10);
 
         .navbar-brand {
-            color: $white;
+            color: $text-0;
+            font-weight: 700;
+            letter-spacing: 0.2px;
         }
 
         .nav-link {
-            color: $white;
+            color: $text-1;
+            border-radius: 999px;
+            padding: 0.45rem 0.75rem;
 
             &:hover {
-                border-radius: 0.25rem;
-                background-color: $tertiary-color;
+                background: rgba($primary-0, 0.16);
+                color: $text-0;
             }
 
             &.active {
-                color: $white;
-                border-bottom: 2px solid $primary-color;
+                color: $text-0;
+                background: rgba($primary-0, 0.20);
+                box-shadow: 0 0 0 1px rgba($primary-1, 0.22) inset, 0 12px 30px rgba($primary-0, 0.12);
             }
+        }
+
+        .navbar-toggler {
+            border: 1px solid $border-1;
+        }
+
+        .navbar-toggler-icon {
+            color: white;
         }
     }
 
+    .offcanvas {
+        background: $bg-1;
+        color: $text-0;
+        border-left: 1px solid $border-0;
+    }
+
+    .offcanvas-header .btn-close {
+        filter: invert(1);
+    }
+
     .portfolio-section {
-        padding: 1rem;
-        background: $background-color-primary;
+        padding: 64px 0;
+        background: transparent;
+
+        > .container-fluid {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
 
         &.section-block {
             min-height: 25rem;
         }
 
         &:nth-of-type(even) {
-            background: $background-color-secondary;
+            background: transparent;
         }
 
         .section-title {
             margin-bottom: 1.25rem;
+            margin-left: 1rem;
+            letter-spacing: -0.02em;
         }
 
         .portfolio-img-border {
-            @include profile-img-border();
+            background: linear-gradient(
+                180deg,
+                rgba($primary-1, 0.95),
+                rgba($accent-0, 0.45),
+                rgba($primary-0, 0.75)
+            );
             border-radius: 50%;
             padding: 0.3rem;
             display: inline-block;
+            box-shadow: 0 0 0 1px rgba($primary-1, 0.18) inset, 0 18px 60px rgba($primary-0, 0.18);
 
             .portfolio-img {
                 width: 12rem;
@@ -104,13 +181,15 @@ body {
         }
 
         .project-card {
-            border: 2px solid lighten($primary-color, 5%);
-            border-radius: 1.25rem;
+            background: linear-gradient(180deg, rgba($surface-1, 0.7), rgba($surface-0, 0.7));
+            border: 1px solid rgba($primary-1, 0.22);
+            border-radius: $radius-lg;
             width: 100%;
             max-width: 18rem;
             display: flex !important;
             flex-direction: column;
             height: 100%;
+            box-shadow: $shadow-0;
 
             > .card-body {
                 flex: 1 1 auto;
@@ -119,14 +198,12 @@ body {
             }
 
             .project-card-title {
-                border-bottom: 1px solid $secondary-color;
+                border-bottom: 1px solid $border-0;
                 padding-bottom: 1rem;
             }
         }
 
         .overview-card {
-            @include overview-card-border();
-
             @for $i from 1 through 5 {
                 &:nth-child(#{$i}) {
                     animation-delay: #{2 * $i}s;
@@ -134,13 +211,17 @@ body {
             }
 
             width: 18rem;
+            border-radius: $radius-lg;
+            box-shadow: $shadow-0;
+            border: 1px solid rgba($primary-1, 0.22);
+            background: rgba($surface-0, 0.78);
 
             .overview-card-title {
                 margin-top: -1rem;
             }
 
             .overview-card-icon {
-                background-color: $primary-color;
+                background: linear-gradient(180deg, $primary-1, $primary-0);
                 border-radius: 50%;
                 color: $white;
                 height: 3rem;
@@ -151,6 +232,7 @@ body {
                 left: calc(50% - 1.5rem);
                 top: -2rem;
                 width: 3rem;
+                box-shadow: 0 10px 30px rgba($primary-0, 0.35);
             }
 
             .overview-card-item {
@@ -162,7 +244,43 @@ body {
     }
 
     footer {
-        background-color: $tertiary-color;
-        color: $white;
+        background: transparent;
+        color: $text-2;
+        border-top: 1px solid $border-0;
     }
+}
+
+.card {
+    box-shadow: $shadow-0;
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-active-color: #fff;
+    --bs-btn-bg: #0b2452;
+    --bs-btn-border-color: rgba(255, 255, 255, 0.75);
+    --bs-btn-hover-bg: #10306a;
+    --bs-btn-hover-border-color: rgba(255, 255, 255, 0.9);
+    --bs-btn-active-bg: #081f45;
+    --bs-btn-active-border-color: rgba(255, 255, 255, 0.95);
+    --bs-btn-focus-shadow-rgb: 96, 165, 250;
+    --bs-btn-disabled-color: rgba(255, 255, 255, 0.65);
+    --bs-btn-disabled-bg: rgba(11, 36, 82, 0.55);
+    --bs-btn-disabled-border-color: rgba(255, 255, 255, 0.28);
+}
+
+.btn-primary {
+    transition: transform 140ms ease, box-shadow 140ms ease, filter 140ms ease;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.03);
+    box-shadow: 0 18px 48px rgba(59, 130, 246, 0.18), 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.btn-primary:active {
+    transform: translateY(-1px);
 }

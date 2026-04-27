@@ -1,9 +1,41 @@
-$background-color-primary: #f8f9fa;
-$background-color-secondary: #e9ecef;
+$bg-0: #070812;
+$bg-1: #0b0d1a;
+$surface-0: #0f1224;
+$surface-1: #121730;
+$surface-2: #171c3a;
 
-$primary-color: #85b5fc;
-$secondary-color: #6c757d;
-$tertiary-color: #212529;
+$text-0: #eef0ff;
+$text-1: rgba(238, 240, 255, 0.78);
+$text-2: rgba(238, 240, 255, 0.62);
 
+$border-0: rgba(255, 255, 255, 0.10);
+$border-1: rgba(255, 255, 255, 0.16);
+
+$primary-0: #3b82f6;
+$primary-1: #60a5fa;
+$accent-0: #a78bfa;
+$accent-1: #22d3ee;
+
+$shadow-0: 0 12px 30px rgba(0, 0, 0, 0.45);
+$shadow-1: 0 20px 60px rgba(0, 0, 0, 0.55);
+
+$radius-sm: 10px;
+$radius-md: 14px;
+$radius-lg: 18px;
+
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 12px;
+$space-4: 16px;
+$space-5: 24px;
+$space-6: 32px;
+$space-7: 48px;
+
+// Legacy aliases (kept to avoid refactoring everything at once)
+$background-color-primary: $bg-0;
+$background-color-secondary: $bg-1;
+$primary-color: $primary-0;
+$secondary-color: $surface-0;
+$tertiary-color: $surface-2;
 $black: #000;
 $white: #fff;

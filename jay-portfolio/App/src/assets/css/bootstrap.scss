@@ -1,0 +1,51 @@
+@import "theme.scss";
+
+// Bootstrap theme variables
+$body-bg: $bg-0;
+$body-color: $text-0;
+$link-color: $primary-1;
+$link-hover-color: $primary-0;
+
+$primary: #2563eb;
+$secondary: $surface-1;
+$success: #22c55e;
+$info: $accent-1;
+$warning: #f59e0b;
+$danger: #ef4444;
+$light: #eef0ff;
+$dark: $bg-0;
+
+$border-color: $border-0;
+$border-radius: $radius-sm;
+$border-radius-sm: 10px;
+$border-radius-lg: $radius-lg;
+$btn-border-radius: 999px;
+$btn-border-radius-sm: 999px;
+$btn-border-radius-lg: 999px;
+
+$card-bg: rgba($surface-0, 0.78);
+$card-border-color: $border-0;
+$card-border-radius: $radius-lg;
+
+$dropdown-bg: $surface-0;
+$dropdown-border-color: $border-0;
+$dropdown-link-color: $text-0;
+$dropdown-link-hover-color: $text-0;
+$dropdown-link-hover-bg: rgba($primary-0, 0.14);
+
+$navbar-dark-color: $text-1;
+$navbar-dark-hover-color: $text-0;
+$navbar-dark-active-color: $text-0;
+$navbar-dark-toggler-border-color: $border-1;
+
+$offcanvas-bg-color: $bg-1;
+$offcanvas-border-color: $border-0;
+
+$input-bg: rgba($surface-0, 0.6);
+$input-color: $text-0;
+$input-border-color: $border-0;
+$input-focus-border-color: rgba($primary-1, 0.55);
+$input-placeholder-color: $text-2;
+
+@import "bootstrap/scss/bootstrap";
+
